@@ -25,18 +25,18 @@
                 Console.WriteLine("Voce usou todas as suas tentativas!");
                 return false;
             }
-            remaining_tries--;
             if (number==n)
             {
                 Console.WriteLine("Voce adivinhou o numero!");
                 return false;
             }
 
-            if(n>number)
+            remaining_tries--;
+
+            if (n>number)
             {
                 Console.WriteLine("Muito alto");
-            }
-            if (n < number)
+            } else
             {
                 Console.WriteLine("Muito baixo");
             }
