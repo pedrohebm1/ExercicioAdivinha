@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34408.163
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExercicioAdivinha", "ExercicioAdivinha\ExercicioAdivinha.csproj", "{01AF767C-2CB7-4CFF-9E6E-C92EB5B8940D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestExercicioAdivinha", "TestExercicioAdivinha\TestExercicioAdivinha.csproj", "{9678EDD8-4FBE-4D5C-BAA5-54D1EBB08DC6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{01AF767C-2CB7-4CFF-9E6E-C92EB5B8940D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{01AF767C-2CB7-4CFF-9E6E-C92EB5B8940D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{01AF767C-2CB7-4CFF-9E6E-C92EB5B8940D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{01AF767C-2CB7-4CFF-9E6E-C92EB5B8940D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9678EDD8-4FBE-4D5C-BAA5-54D1EBB08DC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9678EDD8-4FBE-4D5C-BAA5-54D1EBB08DC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9678EDD8-4FBE-4D5C-BAA5-54D1EBB08DC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9678EDD8-4FBE-4D5C-BAA5-54D1EBB08DC6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46AF722A-3C93-4989-9F10-0412B522BF5B}
+	EndGlobalSection
+EndGlobal
