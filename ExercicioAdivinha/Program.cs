@@ -89,25 +89,30 @@ namespace ExercicioAdivinha
 
         static void ConvertMetrosParaMilimetros()
         {
-            Console.WriteLine("Digite o valor em metros:");
-            double metros = Convert.ToDouble(Console.ReadLine());
+            try
+            {
+                Console.WriteLine("Digite o valor em metros:");
+                double metros = Convert.ToDouble(Console.ReadLine());
 
-            double milimetros = MetrosParaMilimetros(metros);
+                Converter converter = new Converter();
 
-            Console.WriteLine($"{metros} metros equivalem a {milimetros} milímetros.");
+                Console.WriteLine($"{metros} metros equivalem a {converter.convert(metros)} milímetros.");
+            } catch(Exception e) { Console.WriteLine(e.Message); }
         }
 
         static void Soma()
         {
-            Console.WriteLine("Digite o primeiro número:");
-            double num1 = Convert.ToDouble(Console.ReadLine());
+            try
+            {
+                Sum sum1 = new Sum();
+                Console.WriteLine("Digite o primeiro número:");
+                int num1 = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Digite o segundo número:");
-            double num2 = Convert.ToDouble(Console.ReadLine());
+                Console.WriteLine("Digite o segundo número:");
+                int num2 = int.Parse(Console.ReadLine());
 
-            double resultado = num1 + num2;
-
-            Console.WriteLine($"A soma de {num1} e {num2} é igual a {resultado}.");
+                Console.WriteLine($"A soma de {num1} e {num2} é igual a {sum1.sum(num1, num2)}.");
+            } catch (Exception e) { Console.WriteLine(e.Message); }
         }
 
         static void DisplayMenu()
@@ -117,11 +122,6 @@ namespace ExercicioAdivinha
             Console.WriteLine("1. Jogo de adivinhar");
             Console.WriteLine("2. Converter metros para milímetros");
             Console.WriteLine("3. Soma de dois números");
-        }
-
-        static double MetrosParaMilimetros(double metros)
-        {
-            return metros * 1000;
         }
     }
 }
