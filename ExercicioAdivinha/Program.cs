@@ -1,31 +1,42 @@
-﻿using ExercicioAdivinha;
+using ExercicioAdivinha;
 
-public class Program
+namespace ExercicioAdivinha
 {
-    public static void Main(string[] args)
+    public class Program
     {
-        bool isContinue = true;
-        while (isContinue)
+        public static void Main(string[] args)
         {
-            bool isGameFinished = false;
-            DisplayMenu();
-
-            while (!isGameFinished)
+            bool isContinue = true;
+            while (isContinue)
             {
-                string choice = Console.ReadLine();
-                switch (choice)
+                bool isGameFinished = false;
+                DisplayMenu();
+
+                while (!isGameFinished)
                 {
-                    case "0":
-                        isContinue = false;
-                        isGameFinished = true;
-                        break;
-                    case "1":
-                        GuessGame();
-                        isGameFinished = true;
-                        break;
-                    default:
-                        Console.WriteLine("Por favor selecionar uma opção válida.");
-                        break;
+                    string choice = Console.ReadLine();
+                    switch (choice)
+                    {
+                        case "0":
+                            isContinue = false;
+                            isGameFinished = true;
+                            break;
+                        case "1":
+                            GuessGame();
+                            isGameFinished = true;
+                            break;
+                        case "2":
+                            ConvertMetrosParaMilimetros();
+                            isGameFinished = true;
+                            break;
+                        case "3":
+                            Soma();
+                            isGameFinished = true;
+                            break;
+                        default:
+                            Console.WriteLine("Por favor selecione uma opção válida.");
+                            break;
+                    }
                 }
             }
         }
@@ -53,7 +64,7 @@ public class Program
                                 break;
                             }
                         }
-                        Console.WriteLine("Valor incorreto, por favor entre com um numero de 0 a 10");
+                        Console.WriteLine("Valor incorreto, por favor entre com um número de 0 a 10");
                     }
                 }
 
@@ -75,11 +86,42 @@ public class Program
 
             }
         }
-    }
-    public static void DisplayMenu()
-    {
-        Console.WriteLine("Por favor selecione um jogo.");
-        Console.WriteLine("0. Fechar menu");
-        Console.WriteLine("1. Jogo de adivinhar");
+
+        static void ConvertMetrosParaMilimetros()
+        {
+            Console.WriteLine("Digite o valor em metros:");
+            double metros = Convert.ToDouble(Console.ReadLine());
+
+            double milimetros = MetrosParaMilimetros(metros);
+
+            Console.WriteLine($"{metros} metros equivalem a {milimetros} milímetros.");
+        }
+
+        static void Soma()
+        {
+            Console.WriteLine("Digite o primeiro número:");
+            double num1 = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine("Digite o segundo número:");
+            double num2 = Convert.ToDouble(Console.ReadLine());
+
+            double resultado = num1 + num2;
+
+            Console.WriteLine($"A soma de {num1} e {num2} é igual a {resultado}.");
+        }
+
+        static void DisplayMenu()
+        {
+            Console.WriteLine("Por favor selecione uma opção:");
+            Console.WriteLine("0. Fechar menu");
+            Console.WriteLine("1. Jogo de adivinhar");
+            Console.WriteLine("2. Converter metros para milímetros");
+            Console.WriteLine("3. Soma de dois números");
+        }
+
+        static double MetrosParaMilimetros(double metros)
+        {
+            return metros * 1000;
+        }
     }
 }
